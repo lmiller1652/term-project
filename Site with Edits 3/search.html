@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Search | a fork and a pencil</title>
+  <meta name="description" content="Find recipes and articles on a fork and a pencil using keyword search.">
+  <meta property="og:title" content="Search | a fork and a pencil">
+  <meta property="og:description" content="Find anything on a fork and a pencil by keyword.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80">
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+.search-header {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: var(--space-xxl) 0;
+  margin-bottom: var(--space-xxl);
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.search-input {
+  padding: var(--space-sm) var(--space-md);
+  width: 100%;
+  max-width: 500px;
+  font-size: 1rem;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--dark);
+  box-shadow: var(--shadow-md);
+}
+
+.search-btn {
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: var(--dark);
+}
+
+.search-results-count {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.card h3 {
+  margin-bottom: var(--space-sm);
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-container">
+    <a href="index.html" class="logo">
+      <img src="https://images.squarespace-cdn.com/content/v1/5ae2b8fdf93fd4d57303a71d/ba0cb0ad-97b4-4fd4-82ef-f9c5b7f46200/header-logo-a-fork-and-a-pencil.png?format=1500w" alt="A Fork and a Pencil">
+      a fork and a pencil
+    </a>
+    <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="search.html" class="active">Search</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="search-header">
+  <div class="container">
+    <h1>Search Recipes & Articles</h1>
+    <p>Find exactly what you're looking for</p>
+  </div>
+</section>
+
+<section class="container">
+  <form class="search-form">
+    <input type="text" placeholder="What are you looking for? Try 'cake' or 'spice'" class="search-input" id="searchInput">
+    <button type="submit" class="search-btn">🔍</button>
+  </form>
+
+  <div class="search-results-count" id="resultsCount" style="display:none;"></div>
+
+  <div class="search-results" id="searchResults">
+    <!-- Cards injected by JS -->
+  </div>
+
+  <div class="no-results" id="noResults" style="display:none;">
+    <h3>No results found</h3>
+    <p>Try different search terms or browse our categories</p>
+    <a href="recipes.html" class="btn btn-primary">Browse Recipes</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-container">
+    <div class="footer-about">
+      <div class="footer-logo">a fork and a pencil</div>
+      <p>Simple food celebrating the joys of home-cooking, one recipe at a time.</p>
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="Recipes.html">Recipes</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 a fork and a pencil. All rights reserved.
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/search-data.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>
