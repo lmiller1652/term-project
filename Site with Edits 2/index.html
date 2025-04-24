@@ -1,0 +1,134 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home | a fork and a pencil</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="https://images.squarespace-cdn.com/content/v1/5ae2b8fdf93fd4d57303a71d/ba0cb0ad-97b4-4fd4-82ef-f9c5b7f46200/header-logo-a-fork-and-a-pencil.png?format=1500w" alt="A Fork and a Pencil">
+        <span style="color: var(--primary); font-weight: 700;">a fork and a pencil</span>
+      </a>
+      <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="Recipes.html">Recipes</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="search.html">Search</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://source.unsplash.com/1600x500/?food,salad') center/cover no-repeat; color: white; padding: var(--space-xxl) 0; text-align: center;">
+    <div class="container">
+      <h1 style="font-size: 3rem;">Simple cooking. Joyful eating.</h1>
+      <p style="font-size: 1.25rem; margin: var(--space-md) 0;">Food that celebrates the joy of cooking at home, one recipe at a time.</p>
+      <a href="Recipes.html" class="btn btn-primary" style="margin-right: var(--space-sm);">Browse Recipes</a>
+      <a href="#" class="btn btn-outline" style="opacity: 0.5;">Subscribe</a>
+    </div>
+  </section>
+
+  <!-- Recipe Filters -->
+  <section class="container" style="margin: var(--space-xl) auto;">
+    <h2 style="text-align:center;">Featured Recipes</h2>
+    <hr style="width: 80px; border: 2px solid var(--primary); margin: var(--space-sm) auto var(--space-lg);">
+    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-xl);">
+      <label>Category:
+        <select>
+          <option>All Categories</option>
+        </select>
+      </label>
+      <label>Time:
+        <select>
+          <option>Any Time</option>
+        </select>
+      </label>
+      <label>Dietary:
+        <select>
+          <option>Any</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Recipe Grid -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl);">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-img">
+          <img src="https://images.squarespace-cdn.com/content/v1/5ae2b8fdf93fd4d57303a71d/1732169823090-AN2BGX7UORLL38PRB016/Gochujang-chicken-aforkandapencil.jpg" alt="Gochujang Chicken">
+        </div>
+        <div class="card-content">
+          <span class="btn btn-outline" style="background: var(--secondary); color: white; padding: 2px 8px; font-size: 0.75rem;">NEW</span>
+          <h3>Gochujang Chicken</h3>
+          <p>Spicy, sweet, and utterly delicious Korean-inspired chicken dish.</p>
+          <small>30 mins &nbsp; • &nbsp; 4 servings</small>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-img">
+          <img src="https://images.squarespace-cdn.com/content/v1/5ae2b8fdf93fd4d57303a71d/1589086987940-VW0M7T328GJM9Y1D78LH/Leek-brie-risotto.jpg" alt="Leek and Brie Risotto">
+        </div>
+        <div class="card-content">
+          <span class="btn btn-outline" style="background: var(--primary); color: white; padding: 2px 8px; font-size: 0.75rem;">VEGETARIAN</span>
+          <h3>Leek and Brie Risotto</h3>
+          <p>Creamy risotto with the perfect balance of leek and melted brie.</p>
+          <small>45 mins &nbsp; • &nbsp; 2 servings</small>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-img">
+          <img src="https://images.squarespace-cdn.com/content/v1/5ae2b8fdf93fd4d57303a71d/1614593275626-9Y4E3TZXNR90JGNSKVSF/Kladdkaka.jpg" alt="Kladdkaka">
+        </div>
+        <div class="card-content">
+          <span class="btn btn-outline" style="background: teal; color: white; padding: 2px 8px; font-size: 0.75rem;">DESSERT</span>
+          <h3>Kladdkaka (Swedish Chocolate Cake)</h3>
+          <p>The ultimate sticky, gooey chocolate cake that’s easy to make.</p>
+          <small>40 mins &nbsp; • &nbsp; 8 servings</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-about">
+        <div class="footer-logo">a fork and a pencil</div>
+        <p>Simple food celebrating the joys of home-cooking, one recipe at a time.</p>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="Recipes.html">Recipes</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 a fork and a pencil. All rights reserved.
+    </div>
+  
+</footer>
+</body>
+</html>
